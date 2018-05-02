@@ -37,13 +37,13 @@
 					</c:choose>
 			  	</tr>
 			</table>
-	    	<form action = "/DemoApp/readinglist/${book.isbn}" method = "GET">
+	    	<form action = "/readinglist/${book.isbn}" method = "GET">
 		    	<input type = "submit" value = "VIEW"></input>
 		    </form>
-	     	<form action = "/DemoApp/readinglist/edit/${book.isbn}" method = "GET">
+	     	<form action = "/readinglist/edit/${book.isbn}" method = "GET">
 		    	<input type="submit" value = "EDIT"></input>
 		    </form>
-	     	<form action = "/DemoApp/readinglist/delete/${book.isbn}" method = "POST">
+	     	<form action = "/readinglist/delete/${book.isbn}" method = "POST">
 		    	<input type="submit" value = "DELETE"></input>
 		    </form>
 		    <hr>

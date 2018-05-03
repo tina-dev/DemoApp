@@ -94,14 +94,8 @@ public class ReadingListController {
     @RequestMapping(value="/readinglist/delete{isbn}", method= RequestMethod.POST)
     public String deleteBook(Model model, @PathVariable String isbn)
     {
-    	try 
-    	{
     	readingListRepository.deleteByIsbn(isbn);
-    	}
-    	catch (Exception e)
-    	{
-    		System.out.println("Cannot delete this book, error:" + e.getMessage());
-    	}
+    
     	return "redirect:/readinglist";
     }
 }

@@ -20,7 +20,8 @@ public interface ReadingListRepository extends CrudRepository<Book, Long>
     List<Book> findByIsbn(String isbn);
     
     @Transactional
-    void deleteById(int id);
+    void deleteByIsbn(String isbn);
+
     
     /*@Modifying
     @Query("update books p set p.description = :description where p.isbn = :isbn")

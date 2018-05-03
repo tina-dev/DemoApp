@@ -91,10 +91,10 @@ public class ReadingListController {
     	return "redirect:/readinglist";
     }
     
-    @RequestMapping(value="/readinglist/delete/{isbn}", method= RequestMethod.POST)
-    public String deleteBook(Model model, @PathVariable String isbn)
+    @RequestMapping(value="/readinglist/delete/{id}", method= RequestMethod.POST)
+    public String deleteBook(Model model, @PathVariable int id)
     {
-    	readingListRepository.deleteByIsbn(isbn);
+    	readingListRepository.deleteById(id);
 
         return "redirect:/readinglist";
     }

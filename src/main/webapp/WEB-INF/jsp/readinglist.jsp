@@ -22,6 +22,7 @@
 		</div>
 		<br><br>
 		<!-- <h2>Your Reading List</h2>-->
+		<div class = "container">
 		<c:if test="${empty books}">
 			<p>You have no books in your book list</p>
 		</c:if>
@@ -62,6 +63,7 @@
 		    </form>
 		    <hr>
 		</c:forEach>
+		</div>
 		<h3>Add a book</h3>
 		<form method="POST">
 		    <label id="title">Title:</label>

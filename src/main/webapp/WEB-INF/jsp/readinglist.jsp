@@ -65,7 +65,7 @@
 			</c:forEach>
 			</div>
 		</div>
-		<div>
+		<div class = "container">
 			<h3>Add a book</h3>
 			<form method="POST">
 			    <label id="title">Title:</label>

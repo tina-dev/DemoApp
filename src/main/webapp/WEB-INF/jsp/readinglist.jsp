@@ -20,61 +20,64 @@
 				</div>
 			</div>
 		</div>
-		<br><br>
-		<!-- <h2>Your Reading List</h2>-->
-		<div class = "container">
-		<c:if test="${empty books}">
-			<p>You have no books in your book list</p>
-		</c:if>
-		<c:forEach items="${books}" var="book">
-			<table>
-				<tr>
-				    <td>Title: </td>
-				    <td>${book.title}</td>
-			  	</tr>
-			  	<tr>
-				    <td>Author: </td>
-				    <td>${book.author}</td>
-			  	</tr>
-			  	<tr>
-				    <td>ISBN: </td>
-				    <td>${book.isbn}</td>
-			  	</tr>
-			  	<tr>
-				    <td>Description: </td>
-			        <c:choose>
-					    <c:when test="${empty book.description}">
-					        <td>No description available</td>
-					    </c:when>    
-					    <c:otherwise>
-					        <td>${book.description}</td>
-					    </c:otherwise>
-					</c:choose>
-			  	</tr>
-			</table>
-	    	<form action = "/readinglist/${book.isbn}" method = "GET">
-		    	<input type = "submit" value = "VIEW"></input>
-		    </form>
-	     	<form action = "/readinglist/edit/${book.isbn}" method = "GET">
-		    	<input type="submit" value = "EDIT"></input>
-		    </form>
-	     	<form action = "/readinglist/delete/${book.isbn}" method = "POST">
-		    	<input type="submit" value = "DELETE"></input>
-		    </form>
-		    <hr>
-		</c:forEach>
+		<br><br><br>
+		<div class = "headerwrap">
+			<div class = "container">
+			<c:if test="${empty books}">
+				<p>You have no books in your book list</p>
+			</c:if>
+			<c:forEach items="${books}" var="book">
+				<table>
+					<tr>
+					    <td>Title: </td>
+					    <td>${book.title}</td>
+				  	</tr>
+				  	<tr>
+					    <td>Author: </td>
+					    <td>${book.author}</td>
+				  	</tr>
+				  	<tr>
+					    <td>ISBN: </td>
+					    <td>${book.isbn}</td>
+				  	</tr>
+				  	<tr>
+					    <td>Description: </td>
+				        <c:choose>
+						    <c:when test="${empty book.description}">
+						        <td>No description available</td>
+						    </c:when>    
+						    <c:otherwise>
+						        <td>${book.description}</td>
+						    </c:otherwise>
+						</c:choose>
+				  	</tr>
+				</table>
+		    	<form action = "/readinglist/${book.isbn}" method = "GET">
+			    	<input type = "submit" value = "VIEW"></input>
+			    </form>
+		     	<form action = "/readinglist/edit/${book.isbn}" method = "GET">
+			    	<input type="submit" value = "EDIT"></input>
+			    </form>
+		     	<form action = "/readinglist/delete/${book.isbn}" method = "POST">
+			    	<input type="submit" value = "DELETE"></input>
+			    </form>
+			    <hr>
+			</c:forEach>
+			</div>
 		</div>
-		<h3>Add a book</h3>
-		<form method="POST">
-		    <label id="title">Title:</label>
-		    <input type="text" name="title" size="50"></input><br/>
-		    <label id="author">Author:</label>
-		    <input type="text" name="author" size="50"></input><br/>
-		    <label id="isbn">ISBN:</label>
-		    <input type="text" name="isbn" size="15"></input><br/>
-		    <label id="description">Description:</label><br/>
-		    <textarea name="description" cols="80" rows="5"></textarea><br/>
-		    <input type="submit" name = "Submit"></input>
-		</form>
+		<div>
+			<h3>Add a book</h3>
+			<form method="POST">
+			    <label id="title">Title:</label>
+			    <input type="text" name="title" size="50"></input><br/>
+			    <label id="author">Author:</label>
+			    <input type="text" name="author" size="50"></input><br/>
+			    <label id="isbn">ISBN:</label>
+			    <input type="text" name="isbn" size="15"></input><br/>
+			    <label id="description">Description:</label><br/>
+			    <textarea name="description" cols="80" rows="5"></textarea><br/>
+			    <input type="submit" name = "Submit"></input>
+			</form>
+		</div>
 	</body>
 </html>

@@ -3,11 +3,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Reading List</title>
 	</head>
 	<body>
-		<h2>Your Reading List</h2>
+		<div class = "navbar navbar-inverse navbar-fixed-top">
+			<div class = "container">
+				<div class = "navbar-header">
+					<a class="navbar-brand" href="#">Your Reading List</a>
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="book"><span class="glyphicon glyphicon-star"></span> </a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<!-- <h2>Your Reading List</h2>-->
 		<c:if test="${empty books}">
 			<p>You have no books in your book list</p>
 		</c:if>

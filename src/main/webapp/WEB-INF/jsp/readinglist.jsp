@@ -52,14 +52,15 @@
 						</c:choose>
 				  	</tr>
 				</table>
-		    	<form action = "/readinglist/${book.isbn}" method = "GET">
-			    	<input class = "btn btn-primary btn-group-xs" type = "submit" value = "VIEW"></input>
+				<br><br>
+		    	<form class = "btn-group-xs" action = "/readinglist/${book.isbn}" method = "GET">
+			    	<input class = "btn btn-primary" type = "submit" value = "VIEW"></input>
 			    </form>
-		     	<form action = "/readinglist/edit/${book.isbn}" method = "GET">
-			    	<input class ="btn btn-success btn-group-xs" type="submit" value = "EDIT"></input>
+		     	<form class = "btn-group-xs" action = "/readinglist/edit/${book.isbn}" method = "GET">
+			    	<input class ="btn btn-success" type="submit" value = "EDIT"></input>
 			    </form>
-		     	<form action = "/readinglist/delete/${book.isbn}" method = "POST">
-			    	<input class = "btn btn-danger btn-group-xs" type="submit" value = "DELETE"></input>
+		     	<form class = "btn-group-xs" action = "/readinglist/delete/${book.isbn}" method = "POST">
+			    	<input class = "btn btn-danger" type="submit" value = "DELETE"></input>
 			    </form>
 			    <hr>
 			</c:forEach>

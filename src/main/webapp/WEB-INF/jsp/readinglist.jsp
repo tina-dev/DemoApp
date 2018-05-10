@@ -52,7 +52,6 @@
 						</c:choose>
 				  	</tr>
 				</table>
-				<br><br>
 		    	<form class = "btn-group-xs" action = "/readinglist/${book.isbn}" method = "GET">
 			    	<input class = "btn btn-primary" type = "submit" value = "VIEW"></input>
 			    </form>
